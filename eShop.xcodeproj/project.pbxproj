@@ -9,22 +9,36 @@
 /* Begin PBXBuildFile section */
 		1906FE5FDE980996552F75D4 /* Pods_eShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A0755316EBEF93EBA52584 /* Pods_eShop.framework */; };
 		927A061623237AF90053F656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A061523237AF90053F656 /* AppDelegate.swift */; };
-		927A061823237AF90053F656 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A061723237AF90053F656 /* ViewController.swift */; };
+		927A061823237AF90053F656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A061723237AF90053F656 /* LoginViewController.swift */; };
 		927A061B23237AF90053F656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927A061923237AF90053F656 /* Main.storyboard */; };
 		927A061D23237AF90053F656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927A061C23237AF90053F656 /* Assets.xcassets */; };
 		927A062023237AF90053F656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927A061E23237AF90053F656 /* LaunchScreen.storyboard */; };
+		9771CCC423255A8700849A6F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCC323255A8700849A6F /* UIButton.swift */; };
+		9771CCC623255D9700849A6F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCC523255D9700849A6F /* UIColor.swift */; };
+		9771CCC8232561F600849A6F /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCC7232561F600849A6F /* UITextField.swift */; };
+		9771CCCC2326ACF300849A6F /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCCB2326ACF300849A6F /* FirebaseAuthManager.swift */; };
+		9771CCCE2326B04200849A6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9771CCCD2326B04200849A6F /* GoogleService-Info.plist */; };
+		9771CCD02327FCAB00849A6F /* FIRAuthErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCCF2327FCAB00849A6F /* FIRAuthErrorCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B97C6B47F8F4A930065E77A /* Pods-eShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eShop/Pods-eShop.debug.xcconfig"; sourceTree = "<group>"; };
 		78E4BB861BD9F230CACA647D /* Pods-eShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.release.xcconfig"; path = "Target Support Files/Pods-eShop/Pods-eShop.release.xcconfig"; sourceTree = "<group>"; };
 		82B0B7FEF24315569F298F0B /* Pods-eShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.debug.xcconfig"; path = "Target Support Files/Pods-eShop/Pods-eShop.debug.xcconfig"; sourceTree = "<group>"; };
 		927A061223237AF90053F656 /* eShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927A061523237AF90053F656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		927A061723237AF90053F656 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		927A061723237AF90053F656 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		927A061A23237AF90053F656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		927A061C23237AF90053F656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		927A061F23237AF90053F656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		927A062123237AF90053F656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9771CCC323255A8700849A6F /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9771CCC523255D9700849A6F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9771CCC7232561F600849A6F /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		9771CCCB2326ACF300849A6F /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		9771CCCD2326B04200849A6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9771CCCF2327FCAB00849A6F /* FIRAuthErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRAuthErrorCode.swift; sourceTree = "<group>"; };
+		F092976DA521F5A74AE296DA /* Pods-eShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShop/Pods-eShop.release.xcconfig"; sourceTree = "<group>"; };
 		F4A0755316EBEF93EBA52584 /* Pods_eShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -45,8 +59,9 @@
 			children = (
 				82B0B7FEF24315569F298F0B /* Pods-eShop.debug.xcconfig */,
 				78E4BB861BD9F230CACA647D /* Pods-eShop.release.xcconfig */,
+				5B97C6B47F8F4A930065E77A /* Pods-eShop.debug.xcconfig */,
+				F092976DA521F5A74AE296DA /* Pods-eShop.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,14 +94,28 @@
 		927A061423237AF90053F656 /* eShop */ = {
 			isa = PBXGroup;
 			children = (
+				9771CCCD2326B04200849A6F /* GoogleService-Info.plist */,
+				9771CCC22325594C00849A6F /* Controls */,
 				927A061523237AF90053F656 /* AppDelegate.swift */,
-				927A061723237AF90053F656 /* ViewController.swift */,
+				927A061723237AF90053F656 /* LoginViewController.swift */,
 				927A061923237AF90053F656 /* Main.storyboard */,
 				927A061C23237AF90053F656 /* Assets.xcassets */,
 				927A061E23237AF90053F656 /* LaunchScreen.storyboard */,
 				927A062123237AF90053F656 /* Info.plist */,
 			);
 			path = eShop;
+			sourceTree = "<group>";
+		};
+		9771CCC22325594C00849A6F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				9771CCC323255A8700849A6F /* UIButton.swift */,
+				9771CCC523255D9700849A6F /* UIColor.swift */,
+				9771CCC7232561F600849A6F /* UITextField.swift */,
+				9771CCCB2326ACF300849A6F /* FirebaseAuthManager.swift */,
+				9771CCCF2327FCAB00849A6F /* FIRAuthErrorCode.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927A062023237AF90053F656 /* LaunchScreen.storyboard in Resources */,
+				9771CCCE2326B04200849A6F /* GoogleService-Info.plist in Resources */,
 				927A061D23237AF90053F656 /* Assets.xcassets in Resources */,
 				927A061B23237AF90053F656 /* Main.storyboard in Resources */,
 			);
@@ -164,15 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-eShop-checkManifestLockResult.txt",
 			);
@@ -189,10 +215,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-eShop/Pods-eShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -206,8 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927A061823237AF90053F656 /* ViewController.swift in Sources */,
+				9771CCCC2326ACF300849A6F /* FirebaseAuthManager.swift in Sources */,
+				927A061823237AF90053F656 /* LoginViewController.swift in Sources */,
+				9771CCC8232561F600849A6F /* UITextField.swift in Sources */,
+				9771CCC623255D9700849A6F /* UIColor.swift in Sources */,
+				9771CCD02327FCAB00849A6F /* FIRAuthErrorCode.swift in Sources */,
 				927A061623237AF90053F656 /* AppDelegate.swift in Sources */,
+				9771CCC423255A8700849A6F /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.isuruNandun.eShop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samproject.eShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,7 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = eShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.isuruNandun.eShop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samproject.eShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
