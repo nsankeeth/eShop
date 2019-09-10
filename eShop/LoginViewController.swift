@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -99,7 +98,7 @@ class LoginViewController: UIViewController {
         } else {
             authManager.loginUser(email: usernameTextField.text!, password: passwordTextField.text!) {(success, error) in
                 if (success) {
-                    print("Login Successful")
+                    self.performSegue(withIdentifier: "toItemsViewController", sender: self)
                 } else {
                     print("Login Failure")
                 }
