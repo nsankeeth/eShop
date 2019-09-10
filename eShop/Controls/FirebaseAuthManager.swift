@@ -16,8 +16,20 @@ class FirebaseAuthManager {
                 print("Registered User - ", user)
                 completionBlock(true, nil)
             } else {
-                print("Unable to register User - " )
+                print("Unable to register user - ", error! )
                 completionBlock(false, self.handleError(error!))
+            }
+        }
+    }
+    
+    func loginUser(email: String, password: String, completionBlock: @escaping (_ success: Bool, _ errorMessage: String?) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                print("Logged User - ", user!)
+                completionBlock(true, nil)
+            } else{
+                print("Unable to login user - ", error! )
+                completionBlock(false, error?.localizedDescription)
             }
         }
     }

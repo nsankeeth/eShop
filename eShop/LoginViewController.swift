@@ -80,8 +80,8 @@ class LoginViewController: UIViewController {
     }
     
     @objc func didTapLoginButton() {
+        let authManager = FirebaseAuthManager()
         if (currentState == loginState.login.rawValue) {
-            let authManager = FirebaseAuthManager()
             if let email = usernameTextField.text, let password = passwordTextField.text {
                 authManager.createUser(email: email, password: password) {[weak self] (success, error) in
                     guard let `self` = self else { return }
@@ -94,6 +94,14 @@ class LoginViewController: UIViewController {
                     let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        } else {
+            authManager.loginUser(email: usernameTextField.text!, password: passwordTextField.text!) {(success, error) in
+                if (success) {
+                    print("Login Successful")
+                } else {
+                    print("Login Failure")
                 }
             }
         }
@@ -112,6 +120,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func footerAction(_ sender: UIButton) {
+        resetFields()
         loadControllerView()
     }
     
@@ -120,6 +129,11 @@ class LoginViewController: UIViewController {
         titleLabel.text = stateName
         loginButton.setTitle(stateName, for: .normal)
         loginFooterButton.setTitle(footerStateName, for: .normal)
+    }
+    
+    func resetFields() {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
     }
     
 }
