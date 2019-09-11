@@ -12,11 +12,20 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    private let backgroundColor = UIColor(hexString: "#ff5a66")
+    private let tintColor: UIColor = .white
+    
+    private let buttonFont = UIFont.boldSystemFont(ofSize: 10)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        loginButton.configure(color: backgroundColor,
+                              font: buttonFont,
+                              cornerRadius: 10,
+                              backgroundColor: tintColor)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
