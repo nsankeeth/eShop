@@ -8,5 +8,6 @@ target 'eShop' do
   # Pods for eShop
   pod 'Alamofire', '~> 4.7.0-rc.1'
   pod 'Firebase/Auth'
+  pod 'JGProgressHUD'
 
 end

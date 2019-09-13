@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="eShop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginvc" id="BYZ-38-t0r" customClass="LoginViewController" customModule="eShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
         <!--List View-->
         <scene sceneID="vTK-PI-XNV">
             <objects>
-                <viewController id="E0n-zy-hMT" customClass="ItemsViewController" customModule="eShop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ItemsViewController" storyboardIdentifier="itemsvc" id="E0n-zy-hMT" customClass="ItemsViewController" customModule="eShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MX9-IM-LLD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

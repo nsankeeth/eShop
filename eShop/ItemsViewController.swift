@@ -26,6 +26,8 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                               font: buttonFont,
                               cornerRadius: 10,
                               backgroundColor: tintColor)
+        
+        userNameLabel.text = FirebaseAuthManager.getUserName()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +42,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
-        print("Logout button pressed")
+        FirebaseAuthManager.logoutUser()
     }
 
 }

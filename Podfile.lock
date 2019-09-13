@@ -42,6 +42,7 @@ PODS:
   - GoogleUtilities/Reachability (6.2.5):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
+  - JGProgressHUD (2.0.4)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -51,6 +52,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7.0-rc.1)
   - Firebase/Auth
+  - JGProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -65,6 +67,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - GTMSessionFetcher
+    - JGProgressHUD
     - nanopb
 
 SPEC CHECKSUMS:
@@ -79,8 +82,9 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 51134d81fca795c60cc247d1cb6af63c3d67b8d8
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: ab53a04b3014041b29fe3a6c906f96f51f53f1d8
+PODFILE CHECKSUM: 861cc76cede4f9f0d5d5c06fdd5ff90006943650
 
 COCOAPODS: 1.7.5
