@@ -26,6 +26,8 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                               font: buttonFont,
                               cornerRadius: 10,
                               backgroundColor: tintColor)
+        
+        userNameLabel.text = FirebaseAuthManager.getUserName()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

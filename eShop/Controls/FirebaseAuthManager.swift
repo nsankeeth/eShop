@@ -50,9 +50,6 @@ class FirebaseAuthManager {
         let status = isLoggedIn()
         var rootVC : UIViewController?
         
-        print(status)
-        
-        
         if(status == true){
             rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "itemsvc") as! ItemsViewController
         }else{
@@ -67,5 +64,12 @@ class FirebaseAuthManager {
     static func logoutUser() {
         try! Auth.auth().signOut()
         updateRootVC()
+    }
+    
+    static func getUserName() -> String {
+        if let username = Auth.auth().currentUser?.email {
+            return username
+        }
+        return "None"
     }
 }
