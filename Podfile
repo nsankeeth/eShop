@@ -9,5 +9,6 @@ target 'eShop' do
   pod 'Alamofire', '~> 4.7.0-rc.1'
   pod 'Firebase/Auth'
   pod 'JGProgressHUD'
+  pod 'AAFloatingButton', '~> 1.2'
 
 end
