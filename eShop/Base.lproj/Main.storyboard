@@ -191,7 +191,7 @@
         <!--Details-->
         <scene sceneID="pfZ-cY-Thy">
             <objects>
-                <viewController id="Wrs-B5-38u" customClass="DetailViewController" customModule="Hotels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wrs-B5-38u" customClass="DetailViewController" customModule="eShop" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GcK-K2-NoK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,10 +267,16 @@
                         <viewLayoutGuide key="safeArea" id="MtW-r4-vtJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="always" id="Klw-0U-MxF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QUp-fR-a2e">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="QUp-fR-a2e">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="doneButtonPressed:" destination="Wrs-B5-38u" id="0aU-uu-mTj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="locate" id="dLF-Uz-5fe">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="EtF-SR-Ype" kind="show" identifier="toMapViewController" id="8hG-vA-q2w"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -303,5 +309,42 @@
             </objects>
             <point key="canvasLocation" x="2481" y="-826"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="aMJ-Rs-hc6">
+            <objects>
+                <viewController id="EtF-SR-Ype" customClass="MapViewController" customModule="eShop" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rN6-Cm-gSZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5x6-04-0q3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EtF-SR-Ype" id="Ll6-ZP-1PI"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5x6-04-0q3" firstAttribute="leading" secondItem="SQX-e4-0lB" secondAttribute="leading" id="AeQ-bL-M7S"/>
+                            <constraint firstItem="5x6-04-0q3" firstAttribute="top" secondItem="SQX-e4-0lB" secondAttribute="top" id="h6Y-cZ-hzd"/>
+                            <constraint firstItem="5x6-04-0q3" firstAttribute="bottom" secondItem="SQX-e4-0lB" secondAttribute="bottom" id="hCb-V7-e0H"/>
+                            <constraint firstItem="5x6-04-0q3" firstAttribute="trailing" secondItem="SQX-e4-0lB" secondAttribute="trailing" id="xJ8-Tp-Sqx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SQX-e4-0lB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="n6Q-kp-Ftg"/>
+                    <connections>
+                        <outlet property="mapOutlet" destination="5x6-04-0q3" id="ZhB-TR-C7T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQ0-eB-hok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3583" y="1"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="locate" width="26" height="26"/>
+    </resources>
+    <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

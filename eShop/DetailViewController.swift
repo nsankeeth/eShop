@@ -14,6 +14,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    private let backgroundColor = UIColor(hexString: "#ff5a66")
+    
     var itemObject: Item?
 
     override func viewDidLoad() {
@@ -38,6 +40,28 @@ class DetailViewController: UIViewController {
     }
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func findLocationButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toMapViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMapViewController" {
+            let mapViewController = segue.destination as! MapViewController
+            if let item = itemObject {
+                if let latitude = Double(item.latitude) {
+                    mapViewController.latitude = latitude
+                }
+                
+                if let longitude = Double(item.longitude) {
+                    mapViewController.longitude = longitude
+                }
+                
+            }
+            
+        }
+        
     }
     
 }

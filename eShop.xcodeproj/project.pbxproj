@@ -22,6 +22,7 @@
 		9771CCD223280A6100849A6F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCD123280A6100849A6F /* ItemsViewController.swift */; };
 		977B1BC4232BCC2500793A24 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC3232BCC2500793A24 /* DetailViewController.swift */; };
 		977B1BC6232BCC9500793A24 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC5232BCC9500793A24 /* Item.swift */; };
+		977B1BC8232BD9B800793A24 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC7232BD9B800793A24 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9771CCD123280A6100849A6F /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		977B1BC3232BCC2500793A24 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		977B1BC5232BCC9500793A24 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		977B1BC7232BD9B800793A24 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F092976DA521F5A74AE296DA /* Pods-eShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShop/Pods-eShop.release.xcconfig"; sourceTree = "<group>"; };
 		F4A0755316EBEF93EBA52584 /* Pods_eShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				9771CCD123280A6100849A6F /* ItemsViewController.swift */,
 				977B1BC3232BCC2500793A24 /* DetailViewController.swift */,
 				977B1BC5232BCC9500793A24 /* Item.swift */,
+				977B1BC7232BD9B800793A24 /* MapViewController.swift */,
 			);
 			path = eShop;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977B1BC8232BD9B800793A24 /* MapViewController.swift in Sources */,
 				977B1BC6232BCC9500793A24 /* Item.swift in Sources */,
 				977B1BC4232BCC2500793A24 /* DetailViewController.swift in Sources */,
 				9771CCCC2326ACF300849A6F /* FirebaseAuthManager.swift in Sources */,
@@ -414,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZJ6Y45G7JK;
 				INFOPLIST_FILE = eShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samproject.eShop;
@@ -429,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZJ6Y45G7JK;
 				INFOPLIST_FILE = eShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samproject.eShop;
