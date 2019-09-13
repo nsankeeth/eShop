@@ -6,9 +6,12 @@ target 'eShop' do
   use_frameworks!
 
   # Pods for eShop
-  pod 'Alamofire', '~> 4.7.0-rc.1'
+  pod 'Alamofire', '~> 4.8.0-rc.2'
   pod 'Firebase/Auth'
   pod 'JGProgressHUD'
   pod 'AAFloatingButton', '~> 1.2'
+  pod 'PopupDialog', '~> 1.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'AlamofireImage', '~> 3.5'
 
 end
