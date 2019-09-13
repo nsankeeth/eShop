@@ -40,7 +40,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if (loginType == 1) {
             self.view.aa_addFloatingButton("+", backgroundColor, size: 55, bottomMargin: 20) {
-                print("Clicked Added Button")
+                self.performSegue(withIdentifier: "toAddItemViewController", sender: self)
             }
         }
         

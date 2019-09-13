@@ -23,6 +23,7 @@
 		977B1BC4232BCC2500793A24 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC3232BCC2500793A24 /* DetailViewController.swift */; };
 		977B1BC6232BCC9500793A24 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC5232BCC9500793A24 /* Item.swift */; };
 		977B1BC8232BD9B800793A24 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC7232BD9B800793A24 /* MapViewController.swift */; };
+		97EB8880232BF8E000586A9E /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB887F232BF8E000586A9E /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		977B1BC3232BCC2500793A24 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		977B1BC5232BCC9500793A24 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		977B1BC7232BD9B800793A24 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		97EB887F232BF8E000586A9E /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		F092976DA521F5A74AE296DA /* Pods-eShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShop/Pods-eShop.release.xcconfig"; sourceTree = "<group>"; };
 		F4A0755316EBEF93EBA52584 /* Pods_eShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				977B1BC3232BCC2500793A24 /* DetailViewController.swift */,
 				977B1BC5232BCC9500793A24 /* Item.swift */,
 				977B1BC7232BD9B800793A24 /* MapViewController.swift */,
+				97EB887F232BF8E000586A9E /* AddItemViewController.swift */,
 			);
 			path = eShop;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				977B1BC4232BCC2500793A24 /* DetailViewController.swift in Sources */,
 				9771CCCC2326ACF300849A6F /* FirebaseAuthManager.swift in Sources */,
 				927A061823237AF90053F656 /* LoginViewController.swift in Sources */,
+				97EB8880232BF8E000586A9E /* AddItemViewController.swift in Sources */,
 				9771CCD223280A6100849A6F /* ItemsViewController.swift in Sources */,
 				9771CCC8232561F600849A6F /* UITextField.swift in Sources */,
 				9771CCC623255D9700849A6F /* UIColor.swift in Sources */,

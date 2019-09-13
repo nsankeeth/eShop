@@ -182,6 +182,7 @@
                         <outlet property="loginButton" destination="xwi-Er-j9r" id="DMI-QF-0er"/>
                         <outlet property="tableView" destination="utB-se-xM1" id="3my-fY-697"/>
                         <outlet property="userNameLabel" destination="4tO-V5-KKh" id="GfL-h5-Dfu"/>
+                        <segue destination="iH8-53-rKo" kind="show" identifier="toAddItemViewController" id="H8s-06-CYy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsE-y1-yAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,6 +277,7 @@
                         <barButtonItem key="rightBarButtonItem" image="locate" id="dLF-Uz-5fe">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
+                                <action selector="findLocationButtonPressed:" destination="Wrs-B5-38u" id="JVG-VD-pv6"/>
                                 <segue destination="EtF-SR-Ype" kind="show" identifier="toMapViewController" id="8hG-vA-q2w"/>
                             </connections>
                         </barButtonItem>
@@ -289,6 +291,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfH-lk-Y8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2481" y="2"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="E2Y-0C-ZFD">
+            <objects>
+                <viewController id="dlL-8d-MzP" customClass="AddItemViewController" customModule="eShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qjj-Hu-pzx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PvL-eM-58F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Item" id="NcG-1e-4is">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="xkg-Yn-sUT">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="dlL-8d-MzP" id="wL4-n6-X2s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cjr-EQ-xQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631.1999999999998" y="815.44227886056979"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DXG-z6-Aq9">
@@ -341,6 +365,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQ0-eB-hok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3583" y="1"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="re4-Cc-mTU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iH8-53-rKo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6pm-6D-6nI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.3529411764705882" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dlL-8d-MzP" kind="relationship" relationship="rootViewController" id="Dyb-cy-ERo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKq-Ov-Ypk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="815"/>
         </scene>
     </scenes>
     <resources>
