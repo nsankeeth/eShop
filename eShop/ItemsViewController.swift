@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AAFloatingButton
 
 class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -28,6 +29,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                               backgroundColor: tintColor)
         
         userNameLabel.text = FirebaseAuthManager.getUserName()
+        
+        self.view.aa_addFloatingButton("+", backgroundColor, size: 55, bottomMargin: 20) {
+            print("Clicked Added Button")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
