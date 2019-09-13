@@ -79,7 +79,12 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.window?.endEditing(true)
+    }
+    
     @objc func didTapLoginButton() {
+        self.view.window?.endEditing(true)
         let authManager = FirebaseAuthManager()
         if (currentState == loginState.login.rawValue) {
             let spinner = showSpinner(with: "Processing")
@@ -91,6 +96,9 @@ class LoginViewController: UIViewController {
                         spinner.indicatorView = JGProgressHUDSuccessIndicatorView.init()
                         spinner.show(in: self.view)
                         spinner.dismiss(afterDelay: 3.0)
+                        self.currentState = loginState.login.rawValue
+                        self.resetFields()
+                        self.loadControllerView()
                     } else {
                         spinner.textLabel.text = error!
                         spinner.indicatorView = JGProgressHUDErrorIndicatorView.init()
