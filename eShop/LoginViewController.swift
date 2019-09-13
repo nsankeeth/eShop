@@ -85,7 +85,6 @@ class LoginViewController: UIViewController {
     }
     
     @objc func didTapLoginButton() {
-        showLoginOptions()
         self.view.window?.endEditing(true)
         let authManager = FirebaseAuthManager()
         if (currentState == loginState.login.rawValue) {
