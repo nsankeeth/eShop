@@ -40,7 +40,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
-        print("Logout button pressed")
+        FirebaseAuthManager.logoutUser()
     }
 
 }

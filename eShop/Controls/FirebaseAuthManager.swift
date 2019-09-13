@@ -40,4 +40,32 @@ class FirebaseAuthManager {
         }
         return nil
     }
+    
+    static func isLoggedIn() -> Bool {
+        return (Auth.auth().currentUser != nil)
+    }
+    
+    static func updateRootVC(){
+        
+        let status = isLoggedIn()
+        var rootVC : UIViewController?
+        
+        print(status)
+        
+        
+        if(status == true){
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "itemsvc") as! ItemsViewController
+        }else{
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginvc") as! LoginViewController
+        }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = rootVC
+        
+    }
+    
+    static func logoutUser() {
+        try! Auth.auth().signOut()
+        updateRootVC()
+    }
 }

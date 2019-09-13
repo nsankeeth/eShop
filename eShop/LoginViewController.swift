@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -81,29 +82,45 @@ class LoginViewController: UIViewController {
     @objc func didTapLoginButton() {
         let authManager = FirebaseAuthManager()
         if (currentState == loginState.login.rawValue) {
+            let spinner = showSpinner(with: "Processing")
             if let email = usernameTextField.text, let password = passwordTextField.text {
                 authManager.createUser(email: email, password: password) {[weak self] (success, error) in
                     guard let `self` = self else { return }
-                    var message: String = ""
                     if (success) {
-                        message = "Successfully Registered!"
+                        spinner.textLabel.text = "Successfully Registered!"
+                        spinner.indicatorView = JGProgressHUDSuccessIndicatorView.init()
+                        spinner.show(in: self.view)
+                        spinner.dismiss(afterDelay: 3.0)
                     } else {
-                        message = error!
+                        spinner.textLabel.text = error!
+                        spinner.indicatorView = JGProgressHUDErrorIndicatorView.init()
+                        spinner.show(in: self.view)
+                        spinner.dismiss(afterDelay: 3.0)
                     }
-                    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         } else {
+            let spinner = showSpinner(with: "Authenticating")
             authManager.loginUser(email: usernameTextField.text!, password: passwordTextField.text!) {(success, error) in
                 if (success) {
+                    spinner.dismiss()
                     self.performSegue(withIdentifier: "toItemsViewController", sender: self)
                 } else {
-                    print("Login Failure")
+                    spinner.textLabel.text = error?.description
+                    spinner.indicatorView = JGProgressHUDErrorIndicatorView.init()
+                    spinner.show(in: self.view)
+                    spinner.dismiss(afterDelay: 3.0)
                 }
             }
         }
+    }
+    
+    func showSpinner(with message: String) -> JGProgressHUD {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = message
+        hud.show(in: self.view)
+        
+        return hud
     }
     
     func loadCurrentState() {
