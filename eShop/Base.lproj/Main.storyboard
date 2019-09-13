@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDz-Hv-5Ef">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC7-05-jQI">
                                         <rect key="frame" x="163" y="10" width="49" height="30"/>
@@ -65,8 +65,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="gC7-05-jQI" firstAttribute="centerY" secondItem="QDz-Hv-5Ef" secondAttribute="centerY" id="FZY-6H-ntJ"/>
-                                    <constraint firstAttribute="height" constant="50" id="f9e-pt-J3k"/>
+                                    <constraint firstAttribute="height" constant="60" id="f9e-pt-J3k"/>
+                                    <constraint firstItem="gC7-05-jQI" firstAttribute="top" secondItem="QDz-Hv-5Ef" secondAttribute="top" constant="10" id="iZr-Zy-ETA"/>
                                     <constraint firstItem="gC7-05-jQI" firstAttribute="centerX" secondItem="QDz-Hv-5Ef" secondAttribute="centerX" id="jkX-xe-jqZ"/>
                                 </constraints>
                             </view>
@@ -84,7 +84,7 @@
                             <constraint firstItem="fa2-xp-3jw" firstAttribute="top" secondItem="k4w-ye-UhV" secondAttribute="bottom" constant="40" id="Q7w-zL-lS9"/>
                             <constraint firstItem="Xaf-02-Xkv" firstAttribute="top" secondItem="fa2-xp-3jw" secondAttribute="bottom" constant="24" id="SQC-Yx-1r3"/>
                             <constraint firstItem="QDz-Hv-5Ef" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tev-Sy-vRd"/>
-                            <constraint firstItem="QDz-Hv-5Ef" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wCE-eZ-Y4j"/>
+                            <constraint firstAttribute="bottom" secondItem="QDz-Hv-5Ef" secondAttribute="bottom" id="Xg3-Xw-pTr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mE8-EE-Ic5" secondAttribute="trailing" constant="50" id="ynE-67-1sm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fa2-xp-3jw" secondAttribute="trailing" constant="25" id="zws-2s-Fxg"/>
                         </constraints>

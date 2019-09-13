@@ -30,8 +30,12 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         userNameLabel.text = FirebaseAuthManager.getUserName()
         
-        self.view.aa_addFloatingButton("+", backgroundColor, size: 55, bottomMargin: 20) {
-            print("Clicked Added Button")
+        let loginType = UserDefaults.standard.integer(forKey: "loginType")
+        
+        if (loginType == 1) {
+            self.view.aa_addFloatingButton("+", backgroundColor, size: 55, bottomMargin: 20) {
+                print("Clicked Added Button")
+            }
         }
     }
     

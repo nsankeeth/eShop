@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import PopupDialog
 
 class LoginViewController: UIViewController {
 
@@ -84,6 +85,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func didTapLoginButton() {
+        showLoginOptions()
         self.view.window?.endEditing(true)
         let authManager = FirebaseAuthManager()
         if (currentState == loginState.login.rawValue) {
@@ -112,7 +114,7 @@ class LoginViewController: UIViewController {
             authManager.loginUser(email: usernameTextField.text!, password: passwordTextField.text!) {(success, error) in
                 if (success) {
                     spinner.dismiss()
-                    self.performSegue(withIdentifier: "toItemsViewController", sender: self)
+                    self.showLoginOptions()
                 } else {
                     spinner.textLabel.text = error?.description
                     spinner.indicatorView = JGProgressHUDErrorIndicatorView.init()
@@ -158,6 +160,30 @@ class LoginViewController: UIViewController {
     func resetFields() {
         usernameTextField.text = ""
         passwordTextField.text = ""
+    }
+    
+    func showLoginOptions() {
+        let title = "Login As"
+        let message = "Choose account type"
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buyer = DefaultButton(title: "Buyer", dismissOnTap: false) {
+            self.saveLoginTypeAndNavigate(0)
+        }
+        
+        let seller = DefaultButton(title: "Seller", dismissOnTap: false) {
+            self.saveLoginTypeAndNavigate(1)
+        }
+        
+        popup.addButtons([buyer, seller])
+        
+        self.present(popup, animated: true, completion: nil)
+    }
+    
+    func saveLoginTypeAndNavigate(_ type: Int) {
+        UserDefaults.standard.set(type, forKey: "loginType")
+        performSegue(withIdentifier: "toItemsViewController", sender: self)
     }
     
 }

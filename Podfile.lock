@@ -1,6 +1,7 @@
 PODS:
   - AAFloatingButton (1.2)
   - Alamofire (4.7.3)
+  - DynamicBlurView (3.0.1)
   - Firebase/Auth (6.8.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.2.3)
@@ -49,17 +50,21 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PopupDialog (1.0.0):
+    - DynamicBlurView (~> 3.0.1)
 
 DEPENDENCIES:
   - AAFloatingButton (~> 1.2)
   - Alamofire (~> 4.7.0-rc.1)
   - Firebase/Auth
   - JGProgressHUD
+  - PopupDialog (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AAFloatingButton
     - Alamofire
+    - DynamicBlurView
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -72,10 +77,12 @@ SPEC REPOS:
     - GTMSessionFetcher
     - JGProgressHUD
     - nanopb
+    - PopupDialog
 
 SPEC CHECKSUMS:
   AAFloatingButton: a66b3c668cce50cba0ae010383c0c9d09a74e6f5
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
   Firebase: c35912a5c160193dc423f260dac3f167a1a795ab
   FirebaseAuth: e7f86c2dfc57281cd01f7da5e4b40e01e4510a4a
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -88,7 +95,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PopupDialog: 28f29a1ffe9e1fab32fb258b53d56ca31670e8a2
 
-PODFILE CHECKSUM: d805c8c034220e522f9a473523cc0fb3c48a77c6
+PODFILE CHECKSUM: 28f06e19a6b61bda7d8287af7609a6d5d82d6fc3
 
 COCOAPODS: 1.7.5

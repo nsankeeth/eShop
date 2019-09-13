@@ -10,5 +10,6 @@ target 'eShop' do
   pod 'Firebase/Auth'
   pod 'JGProgressHUD'
   pod 'AAFloatingButton', '~> 1.2'
+  pod 'PopupDialog', '~> 1.0'
 
 end
