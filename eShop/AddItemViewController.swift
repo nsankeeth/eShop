@@ -14,11 +14,14 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var uploadImageButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var postItemButton: UIButton!
+    @IBOutlet var footerView: UIView!
     
     private let backgroundColor: UIColor = .white
-    private let tintColor = UIColor(hexString: "#ff5a66")
+    private let tintColor = UIColor(hexString: "#FE717B")
     
-    private let buttonFont = UIFont.boldSystemFont(ofSize: 10)
+    private let uploadButtonFont = UIFont.boldSystemFont(ofSize: 10)
+    private let postButtonFont = UIFont.boldSystemFont(ofSize: 15)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +32,17 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         uploadImageButton.addTarget(self, action: #selector(didTapUploadImageButton), for: .touchUpInside)
         uploadImageButton.configure(color: backgroundColor,
-                              font: buttonFont,
+                              font: uploadButtonFont,
                               cornerRadius: 10,
                               backgroundColor: tintColor)
         uploadImageButton.setTitle("Upload Image", for: .normal)
+        
+        postItemButton.configure(color: tintColor,
+                                 font: postButtonFont,
+                                 cornerRadius: 10,
+                                 backgroundColor: backgroundColor)
+        postItemButton.setTitle("Post Item", for: .normal)
+        footerView.backgroundColor = tintColor
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
