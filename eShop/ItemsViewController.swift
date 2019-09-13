@@ -22,6 +22,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     private let tintColor: UIColor = .white
     
     var itemsData: JSON?
+    var item: Item?
     
     private let buttonFont = UIFont.boldSystemFont(ofSize: 10)
 
@@ -76,6 +77,27 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let data = itemsData {
+            let currentItem = Item(itemTitle: data[indexPath.row]["title"].string!, itemImageURL: data[indexPath.row]["image_url"].string!, itemDescription: data[indexPath.row]["description"].string!, itemPrice: data[indexPath.row]["price"].string!, itemLatitude: data[indexPath.row]["latitude"].string!, itemLongitude: data[indexPath.row]["longitude"].string!)
+            
+            item = currentItem
+        }
+        
+        performSegue(withIdentifier: "toDetailViewController", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailViewController" {
+            let destinationNavigationController = segue.destination as! UINavigationController
+            let detailViewController = destinationNavigationController.topViewController as! DetailViewController
+            detailViewController.itemObject = item
+        }
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {

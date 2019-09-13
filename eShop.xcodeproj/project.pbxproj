@@ -20,6 +20,8 @@
 		9771CCCE2326B04200849A6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9771CCCD2326B04200849A6F /* GoogleService-Info.plist */; };
 		9771CCD02327FCAB00849A6F /* FIRAuthErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCCF2327FCAB00849A6F /* FIRAuthErrorCode.swift */; };
 		9771CCD223280A6100849A6F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771CCD123280A6100849A6F /* ItemsViewController.swift */; };
+		977B1BC4232BCC2500793A24 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC3232BCC2500793A24 /* DetailViewController.swift */; };
+		977B1BC6232BCC9500793A24 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977B1BC5232BCC9500793A24 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		9771CCCD2326B04200849A6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9771CCCF2327FCAB00849A6F /* FIRAuthErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRAuthErrorCode.swift; sourceTree = "<group>"; };
 		9771CCD123280A6100849A6F /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		977B1BC3232BCC2500793A24 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		977B1BC5232BCC9500793A24 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F092976DA521F5A74AE296DA /* Pods-eShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShop/Pods-eShop.release.xcconfig"; sourceTree = "<group>"; };
 		F4A0755316EBEF93EBA52584 /* Pods_eShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +109,8 @@
 				927A061E23237AF90053F656 /* LaunchScreen.storyboard */,
 				927A062123237AF90053F656 /* Info.plist */,
 				9771CCD123280A6100849A6F /* ItemsViewController.swift */,
+				977B1BC3232BCC2500793A24 /* DetailViewController.swift */,
+				977B1BC5232BCC9500793A24 /* Item.swift */,
 			);
 			path = eShop;
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977B1BC6232BCC9500793A24 /* Item.swift in Sources */,
+				977B1BC4232BCC2500793A24 /* DetailViewController.swift in Sources */,
 				9771CCCC2326ACF300849A6F /* FirebaseAuthManager.swift in Sources */,
 				927A061823237AF90053F656 /* LoginViewController.swift in Sources */,
 				9771CCD223280A6100849A6F /* ItemsViewController.swift in Sources */,
