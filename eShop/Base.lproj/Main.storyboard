@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="utB-se-xM1">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="zml-GB-1Z1">
@@ -173,7 +173,7 @@
                             <constraint firstItem="utB-se-xM1" firstAttribute="trailing" secondItem="vr9-lG-B1l" secondAttribute="trailing" id="KQr-cx-QeR"/>
                             <constraint firstAttribute="bottom" secondItem="utB-se-xM1" secondAttribute="bottom" id="U4b-lk-tOl"/>
                             <constraint firstItem="utB-se-xM1" firstAttribute="leading" secondItem="vr9-lG-B1l" secondAttribute="leading" id="rLC-KK-ySn"/>
-                            <constraint firstItem="utB-se-xM1" firstAttribute="top" secondItem="95y-kG-zxg" secondAttribute="bottom" constant="8" id="x74-KR-DKm"/>
+                            <constraint firstItem="utB-se-xM1" firstAttribute="top" secondItem="95y-kG-zxg" secondAttribute="bottom" id="x74-KR-DKm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vr9-lG-B1l"/>
                     </view>

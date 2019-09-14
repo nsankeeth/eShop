@@ -45,6 +45,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         getData()
+        tableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
