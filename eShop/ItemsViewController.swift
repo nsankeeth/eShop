@@ -11,6 +11,7 @@ import AAFloatingButton
 import Alamofire
 import SwiftyJSON
 import AlamofireImage
+import JGProgressHUD
 
 class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -35,6 +36,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                               backgroundColor: tintColor)
         
         userNameLabel.text = FirebaseAuthManager.getUserName()
+        tableView.tableFooterView = UIView()
         
         let loginType = UserDefaults.standard.integer(forKey: "loginType")
         
@@ -43,7 +45,9 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.performSegue(withIdentifier: "toAddItemViewController", sender: self)
             }
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getData()
     }
     
@@ -105,14 +109,21 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func getData() {
-        //Used alamofire to handle api and swifty json to process json
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
         Alamofire.request("http://ec2-3-15-177-123.us-east-2.compute.amazonaws.com:3000/items").responseJSON { response in
             
             do {
+                hud.dismiss()
                 let json = try JSON(data: response.data!)
                 self.itemsData = json["items"]
                 self.tableView.reloadData()
             } catch {
+                hud.textLabel.text = "Loading Failed"
+                hud.indicatorView = JGProgressHUDErrorIndicatorView.init()
+                hud.show(in: self.view)
+                hud.dismiss(afterDelay: 3.0)
                 print(error)
             }
         }

@@ -9,6 +9,9 @@ PODS:
     - FirebaseAuth (~> 6.2.3)
   - Firebase/CoreOnly (6.8.0):
     - FirebaseCore (= 6.2.2)
+  - Firebase/Storage (6.8.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.4.0)
   - FirebaseAuth (6.2.3):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.2)
@@ -27,6 +30,10 @@ PODS:
     - GoogleUtilities/Environment (~> 6.2)
     - GoogleUtilities/Logger (~> 6.2)
   - FirebaseCoreDiagnosticsInterop (1.0.0)
+  - FirebaseStorage (3.4.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleDataTransport (1.2.0)
   - GoogleDataTransportCCTSupport (1.0.3):
     - GoogleDataTransport (~> 1.2)
@@ -54,16 +61,17 @@ PODS:
   - nanopb/encode (0.3.901)
   - PopupDialog (1.0.0):
     - DynamicBlurView (~> 3.0.1)
-  - SwiftyJSON (4.3.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - AAFloatingButton (~> 1.2)
   - Alamofire (~> 4.8.0-rc.2)
   - AlamofireImage (~> 3.5)
   - Firebase/Auth
+  - Firebase/Storage
   - JGProgressHUD
   - PopupDialog (~> 1.0)
-  - SwiftyJSON (~> 4.0)
+  - SwiftyJSON (~> 3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -77,6 +85,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
+    - FirebaseStorage
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
@@ -97,6 +106,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 12422a2a2b79ed161b06ccad1edfe650de7a4b34
   FirebaseCoreDiagnostics: 4c04ae09d0ab027c30179828c6bb47764df1bd13
   FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
+  FirebaseStorage: 618dd8fd886b30adf6e5d1915b1f5c18cb5c3944
   GoogleDataTransport: 8f9897b8e073687f24ca8d3c3a8013dec7d2d1cc
   GoogleDataTransportCCTSupport: 51134d81fca795c60cc247d1cb6af63c3d67b8d8
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
@@ -104,8 +114,8 @@ SPEC CHECKSUMS:
   JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   PopupDialog: 28f29a1ffe9e1fab32fb258b53d56ca31670e8a2
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: cd582b09b12c58a74733491e98f54f47e0906b5b
+PODFILE CHECKSUM: a205025fe42c7a12b562cf1a53dc04e04f721f64
 
 COCOAPODS: 1.7.5
