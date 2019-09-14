@@ -90,7 +90,23 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @objc func didTapPostItemButton() {
-        let parameters: [String:String] = ["title":"Test title", "description":"Test description", "price":"12.34"]
+        guard let image = imageView.image, !(image == UIImage(named: "placeholder")) else {
+            validate(with: "Image")
+            return
+        }
+        guard let title = titleTextField.text, !title.isEmpty else {
+            validate(with: "Title")
+            return
+        }
+        guard let price = priceTextField.text, !price.isEmpty else {
+            validate(with: "Price")
+            return
+        }
+        guard let description = descriptionTextField.text, !description.isEmpty else {
+            validate(with: "Description")
+            return
+        }
+        let parameters: [String:String] = ["title": title, "description": description, "price": price]
         process(with: parameters)
     }
     
@@ -191,5 +207,19 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             return ["latitude": String(currentLocation.coordinate.latitude), "longitude": String(currentLocation.coordinate.longitude)]
         }
         return [:]
+    }
+    
+    func validate(with message: String) {
+        let title = message + " Required"
+        let message = "Provide all required data and proceed"
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let done = CancelButton(title: "Done") {
+            print("You canceled the popup dialog.")
+        }
+        
+        popup.addButtons([done])
+        self.present(popup, animated: true, completion: nil)
     }
 }
