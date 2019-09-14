@@ -16,12 +16,19 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var postItemButton: UIButton!
     @IBOutlet var footerView: UIView!
+    @IBOutlet internal var titleTextField: UITextField!
+    @IBOutlet internal var priceTextField: UITextField!
+    @IBOutlet internal var descriptionTextField: UITextField!
     
     private let backgroundColor: UIColor = .white
     private let tintColor = UIColor(hexString: "#FE717B")
     
     private let uploadButtonFont = UIFont.boldSystemFont(ofSize: 10)
     private let postButtonFont = UIFont.boldSystemFont(ofSize: 15)
+    
+    private let textFieldFont = UIFont.systemFont(ofSize: 16)
+    private let textFieldColor = UIColor.black
+    private let textFieldBorderColor = UIColor(hexString: "#B0B3C6")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +50,10 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
                                  backgroundColor: backgroundColor)
         postItemButton.setTitle("Post Item", for: .normal)
         footerView.backgroundColor = tintColor
+        
+        construct(titleTextField, with: "Item Title")
+        construct(priceTextField, with: "Item Price")
+        construct(descriptionTextField, with: "Item Description")
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
@@ -71,6 +82,10 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.present(popup, animated: true, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.window?.endEditing(true)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let userPickedImage = info[.editedImage] as? UIImage else {
@@ -88,6 +103,17 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker.allowsEditing = true
         imagePicker.sourceType = sourceType
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func construct(_ textField: UITextField, with name: String) {
+        textField.configure(color: textFieldColor,
+                                 font: textFieldFont,
+                                 cornerRadius: 10,
+                                 borderColor: textFieldBorderColor,
+                                 backgroundColor: backgroundColor,
+                                 borderWidth: 1.0)
+        textField.placeholder = name
+        textField.clipsToBounds = true
     }
 
 }
