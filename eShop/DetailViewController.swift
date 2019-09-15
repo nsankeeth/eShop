@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
     func loadData() {
         if let item = itemObject {
             titleLabel.text = item.title
-            priceLabel.text = item.price
+            priceLabel.text = "Rs. " + item.price
             descriptionLabel.text = item.description
             
             let url = URL(string: item.imageURL)
