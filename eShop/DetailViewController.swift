@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     private let backgroundColor = UIColor(hexString: "#ff5a66")
@@ -31,6 +32,7 @@ class DetailViewController: UIViewController {
     func loadData() {
         if let item = itemObject {
             titleLabel.text = item.title
+            priceLabel.text = item.price
             descriptionLabel.text = item.description
             
             let url = URL(string: item.imageURL)
