@@ -197,21 +197,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-vE-ORX" userLabel="upper Image View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-vE-ORX" userLabel="upper Image View" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                 <rect key="frame" x="8" y="72" width="359" height="179.5"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rnp-2U-Z9n">
-                                        <rect key="frame" x="90" y="0.0" width="179.5" height="179.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Rnp-2U-Z9n" secondAttribute="height" multiplier="1:1" id="jwz-rk-haE"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Rnp-2U-Z9n" secondAttribute="bottom" id="EEh-md-qVY"/>
-                                    <constraint firstItem="Rnp-2U-Z9n" firstAttribute="centerX" secondItem="bdp-vE-ORX" secondAttribute="centerX" id="bBY-FX-eNP"/>
-                                    <constraint firstItem="Rnp-2U-Z9n" firstAttribute="top" secondItem="bdp-vE-ORX" secondAttribute="top" id="fQ4-no-wOv"/>
                                     <constraint firstAttribute="width" secondItem="bdp-vE-ORX" secondAttribute="height" multiplier="2:1" id="vq3-uv-qeQ"/>
                                 </constraints>
                             </view>
@@ -252,12 +241,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rnp-2U-Z9n">
+                                        <rect key="frame" x="90" y="60" width="179.5" height="179.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Rnp-2U-Z9n" secondAttribute="height" multiplier="1:1" id="jwz-rk-haE"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="n0c-Tt-nPk" secondAttribute="trailing" constant="8" id="2Fk-gj-kAQ"/>
                                     <constraint firstItem="n0c-Tt-nPk" firstAttribute="top" secondItem="mbD-hu-0yq" secondAttribute="top" constant="8" id="I6q-sw-WcM"/>
+                                    <constraint firstItem="Rnp-2U-Z9n" firstAttribute="top" secondItem="mbD-hu-0yq" secondAttribute="top" constant="60" id="Jcn-tx-ugx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rnp-2U-Z9n" secondAttribute="bottom" constant="60" id="TJa-ec-TD8"/>
                                     <constraint firstItem="n0c-Tt-nPk" firstAttribute="leading" secondItem="mbD-hu-0yq" secondAttribute="leading" constant="8" id="eFB-66-7Dc"/>
+                                    <constraint firstItem="Rnp-2U-Z9n" firstAttribute="centerX" secondItem="mbD-hu-0yq" secondAttribute="centerX" id="mTn-PG-LBh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -295,6 +293,7 @@
                         <outlet property="descriptionLabel" destination="n0c-Tt-nPk" id="dox-kX-qre"/>
                         <outlet property="imageView" destination="Rnp-2U-Z9n" id="ALe-vl-kQf"/>
                         <outlet property="priceLabel" destination="j2l-my-24g" id="sdh-3a-xSd"/>
+                        <outlet property="slideshow" destination="bdp-vE-ORX" id="8B6-PN-5Ii"/>
                         <outlet property="titleLabel" destination="AcT-RW-gIv" id="Mmy-jp-2Mv"/>
                     </connections>
                 </viewController>
