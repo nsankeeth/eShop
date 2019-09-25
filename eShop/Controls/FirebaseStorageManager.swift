@@ -32,7 +32,7 @@ class FirebaseStorageManager {
         let now = Date()
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm_\(Int.random(in: 0 ..< 100000))"
         return formatter.string(from: now) + ".png"
     }
 }

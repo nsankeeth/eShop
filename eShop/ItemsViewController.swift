@@ -77,7 +77,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.imageView?.bounds = CGRect(x: 0, y: 0, width: 35, height: 35)
             cell.imageView?.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
             
-            cell.imageView?.af_setImage(withURL: URL(string: data[indexPath.row]["image_url"].string!)!, placeholderImage: UIImage(named: "placeholder"), filter: nil, progress: nil, imageTransition: UIImageView.ImageTransition.curlDown(0.5), completion: nil)
+            cell.imageView?.af_setImage(withURL: URL(string: data[indexPath.row]["image_url"].string!.components(separatedBy: ",")[0])!, placeholderImage: UIImage(named: "placeholder"), filter: nil, progress: nil, imageTransition: UIImageView.ImageTransition.curlDown(0.5), completion: nil)
         }
         
         return cell
