@@ -31,6 +31,14 @@ class DetailViewController: UIViewController {
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async {
+            self.descriptionTextView.scrollRangeToVisible(NSRange(location: 0, length: 0))
+        }
+    }
+    
     func loadData() {
         if let item = itemObject {
             titleLabel.text = item.title
