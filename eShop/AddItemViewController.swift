@@ -55,7 +55,7 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
                               font: uploadButtonFont,
                               cornerRadius: 10,
                               backgroundColor: tintColor)
-        uploadImageButton.setTitle("Upload Image", for: .normal)
+        uploadImageButton.setTitle("Add Image(s)", for: .normal)
         
         postItemButton.addTarget(self, action: #selector(didTapPostItemButton), for: .touchUpInside)
         postItemButton.configure(color: tintColor,
