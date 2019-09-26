@@ -11,10 +11,9 @@ import ImageSlideshow
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet var slideshow: ImageSlideshow!
     
     private let backgroundColor = UIColor(hexString: "#ff5a66")
@@ -32,11 +31,19 @@ class DetailViewController: UIViewController {
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async {
+            self.descriptionTextView.scrollRangeToVisible(NSRange(location: 0, length: 0))
+        }
+    }
+    
     func loadData() {
         if let item = itemObject {
             titleLabel.text = item.title
             priceLabel.text = "Rs. " + item.price
-            descriptionLabel.text = item.description
+            descriptionTextView.text = item.description
             
             initSlideshow(images: item.imageURL.components(separatedBy: ","))
         }
